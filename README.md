@@ -1,8 +1,6 @@
 # Aman Kumar – Developer Portfolio 💻
 
-A modern and responsive developer portfolio built using HTML, CSS, JavaScript, and deployed on Netlify.
-
-🚀 [Live Demo](https://devportfolioaman.netlify.app)
+A modern and responsive developer portfolio built using HTML, CSS, TypeScript, and deployed on Netlify.
 
 ---
 
@@ -15,9 +13,9 @@ I love building scalable web applications using **Java**, **Spring Boot**, and *
 
 ## 🔧 Tech Stack
 
-- **Frontend**: HTML, CSS, JavaScript, Bootstrap
+- **Frontend**: HTML, CSS, TypeScript, Bootstrap
 - **Backend**: Not Applicable (Static Portfolio)
-- **Tools**: VS Code, Git, GitHub, Netlify
+- **Tools**: VS Code, Git, GitHub, Netlify (for hosting)
 
 ---
 
