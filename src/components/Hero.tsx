@@ -28,9 +28,7 @@ const Hero = () => {
           Aman Kumar
         </h1>
         
-        <p className="text-xl md:text-2xl text-gray-300 mb-6 animate-fade-in delay-300">
-          Aspiring Backend Developer | Java | Spring Boot | MySQL
-        </p>
+        <p className="text-xl mb-6 animate-fade-in delay-300 text-emerald-400 font-medium md:text-2xl ">Aspiring Software Engineer | Java | Spring Boot </p>
         
         <p className="text-lg text-gray-400 max-w-2xl mx-auto mb-8 leading-relaxed animate-fade-in delay-500">A passionate software developer with a strong interest in Backend Development. I’m driven by curiosity and a constant desire to learn and grow in the ever-evolving world of technology.</p>
 
