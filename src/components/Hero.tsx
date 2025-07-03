@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Github, Linkedin, Mail, ArrowDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -20,8 +19,12 @@ const Hero = () => {
         {/* Profile Image */}
         <div className="mb-8 relative">
           <div className="w-48 h-48 mx-auto rounded-full bg-gradient-to-r from-orange-500 to-teal-500 p-1 animate-fade-in">
-            <div className="w-full h-full rounded-full bg-gray-800 flex items-center justify-center text-6xl font-bold text-orange-500">
-              AK
+            <div className="w-full h-full rounded-full overflow-hidden bg-gray-800">
+              <img 
+                src="https://i.postimg.cc/QNwPxTHL/Whats-App-Image-2024-09-25-at-14-12-36-c3544c34.jpg" 
+                alt="Aman Kumar - Profile Picture"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>
