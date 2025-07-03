@@ -44,10 +44,10 @@ const Hero = () => {
 
         {/* Social Links */}
         <div className="flex justify-center space-x-6 mb-12 animate-fade-in delay-1000">
-          <a href="https://linkedin.com/in/aman-kumar" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-orange-500 transition-all duration-300 hover:scale-110">
+          <a href="https://linkedin.com/in/dev-aman-kr17/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-orange-500 transition-all duration-300 hover:scale-110">
             <Linkedin size={24} />
           </a>
-          <a href="https://github.com/amankr1705" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-orange-500 transition-all duration-300 hover:scale-110">
+          <a href="https://github.com/BackendbyAman" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-orange-500 transition-all duration-300 hover:scale-110">
             <Github size={24} />
           </a>
           <a href="mailto:amankr1705@gmail.com" className="text-gray-400 hover:text-orange-500 transition-all duration-300 hover:scale-110">
