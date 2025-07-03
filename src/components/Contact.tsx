@@ -33,14 +33,14 @@ const Contact = () => {
 
   const contactInfo = [
     { icon: Mail, label: 'Email', value: 'amankr1705@gmail.com', href: 'mailto:amankr1705@gmail.com' },
-    { icon: Phone, label: 'Phone', value: '+91 8252363485', href: 'tel:+918252363485' }
+    { icon: Phone, label: 'Phone', value: '+91 8252363485', href: 'tel:+91 8252363485' }
   ];
 
   const socialLinks = [
-    { icon: Linkedin, label: 'LinkedIn', href: 'https://linkedin.com/in/aman-kumar', color: 'hover:text-blue-500' },
-    { icon: Github, label: 'GitHub', href: 'https://github.com/amankr1705', color: 'hover:text-gray-400' },
-    { icon: Code, label: 'HackerRank', href: '#', color: 'hover:text-green-500' },
-    { icon: Trophy, label: 'LeetCode', href: '#', color: 'hover:text-yellow-500' }
+    { icon: Linkedin, label: 'LinkedIn', href: 'https://linkedin.com/in/dev-aman-kr17/', color: 'hover:text-blue-500' },
+    { icon: Github, label: 'GitHub', href: 'https://github.com/BackendbyAman', color: 'hover:text-gray-400' },
+    { icon: Code, label: 'HackerRank', href: 'https://www.hackerrank.com/profile/amankr17', color: 'hover:text-green-500' },
+    { icon: Trophy, label: 'LeetCode', href: 'https://www.geeksforgeeks.org/user/amankr_17/', color: 'hover:text-yellow-500' }
   ];
 
   return (
