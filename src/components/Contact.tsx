@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Mail, Phone, Linkedin, Github, Code, Trophy } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -14,14 +13,34 @@ const Contact = () => {
   });
   const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for your message. I'll get back to you soon!",
+
+    const formDataEncoded = new URLSearchParams();
+    Object.entries(formData).forEach(([key, value]) => {
+      formDataEncoded.append(key, value);
     });
-    setFormData({ name: '', email: '', message: '' });
+
+    try {
+      await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: `form-name=contact&${formDataEncoded.toString()}`,
+      });
+
+      toast({
+        title: "Message Sent!",
+        description: "Thank you for your message. I'll get back to you soon!",
+      });
+
+      setFormData({ name: '', email: '', message: '' });
+
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Something went wrong. Please try again later.",
+      });
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -54,10 +73,25 @@ const Contact = () => {
         </p>
 
         <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+
+          {/* 🧩 Netlify Hidden Form to Detect */}
+          <form name="contact" netlify hidden>
+            <input type="text" name="name" />
+            <input type="email" name="email" />
+            <textarea name="message" />
+          </form>
+
           {/* Contact Form */}
           <div className="bg-gray-900 p-8 rounded-2xl border border-gray-700">
             <h3 className="text-2xl font-bold text-white mb-6">Send a Message</h3>
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form
+              name="contact"
+              method="POST"
+              data-netlify="true"
+              onSubmit={handleSubmit}
+              className="space-y-6"
+            >
+              <input type="hidden" name="form-name" value="contact" />
               <div>
                 <Input
                   type="text"
@@ -102,7 +136,6 @@ const Contact = () => {
 
           {/* Contact Info */}
           <div className="space-y-8">
-            {/* Direct Contact */}
             <div className="bg-gray-900 p-8 rounded-2xl border border-gray-700">
               <h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>
               <div className="space-y-4">
@@ -149,6 +182,7 @@ const Contact = () => {
               </div>
             </div>
           </div>
+
         </div>
       </div>
     </section>
@@ -156,3 +190,4 @@ const Contact = () => {
 };
 
 export default Contact;
+
