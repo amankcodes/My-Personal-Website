@@ -12,14 +12,31 @@ const Index = () => {
   return (
     <div className="bg-gray-900 text-white min-h-screen">
       <Hero />
-      <About />
-      <Skills />
-      <Services />
-      <Projects />
-      <Contact />
+
+      <div id="about">
+        <About />
+      </div>
+
+      <div id="skills">
+        <Skills />
+      </div>
+
+      <div id="services">
+        <Services />
+      </div>
+
+      <div id="projects">
+        <Projects />
+      </div>
+
+      <div id="contact">
+        <Contact />
+      </div>
+
       <Footer />
     </div>
   );
 };
 
 export default Index;
+
