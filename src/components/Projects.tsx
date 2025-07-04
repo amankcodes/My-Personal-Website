@@ -8,7 +8,7 @@ const Projects = () => {
       description: 'Face recognition-based cloud attendance manager with real-time tracking and comprehensive reporting dashboard.',
       tech: ['Java', 'Spring Boot', 'MySQL', 'Thymeleaf', 'GitHub Actions'],
       image: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?w=500&h=300&fit=crop',
-      github: '#',
+      github: 'https://github.com/BackendbyAman/Cloud_Attendance_System.git',
       demo: '#',
       color: 'from-orange-500 to-red-500'
     },
@@ -26,7 +26,7 @@ const Projects = () => {
       description: 'Interactive Java Swing game converted to web-based platform with modern UI and enhanced gameplay.',
       tech: ['Java', 'Swing', 'Spring Boot', 'HTML', 'CSS'],
       image: 'https://images.unsplash.com/photo-1511512578047-dfb367046420?w=500&h=300&fit=crop',
-      github: '#',
+      github: 'https://github.com/BackendbyAman/Bubble-sqidder.git',
       demo: '#',
       color: 'from-purple-500 to-pink-500'
     }
@@ -111,3 +111,4 @@ const Projects = () => {
 };
 
 export default Projects;
+
