@@ -33,7 +33,7 @@ const Navbar = () => {
           className="text-2xl font-bold text-white tracking-wide cursor-pointer"
           onClick={() => scrollTo('hero')}
         >
-          Aman.dev
+          aman.dev
         </h1>
 
         {/* Navigation Links */}
