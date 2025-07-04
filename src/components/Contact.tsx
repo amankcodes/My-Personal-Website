@@ -3,7 +3,6 @@ import { Mail, Phone, Linkedin, Github, Code, Trophy } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { useToast } from '@/hooks/use-toast';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -11,37 +10,6 @@ const Contact = () => {
     email: '',
     message: ''
   });
-  const { toast } = useToast();
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-
-    const formDataEncoded = new URLSearchParams();
-    Object.entries(formData).forEach(([key, value]) => {
-      formDataEncoded.append(key, value);
-    });
-
-    try {
-      await fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: `form-name=contact&${formDataEncoded.toString()}`,
-      });
-
-      toast({
-        title: "Message Sent!",
-        description: "Thank you for your message. I'll get back to you soon!",
-      });
-
-      setFormData({ name: '', email: '', message: '' });
-
-    } catch (error) {
-      toast({
-        title: "Error",
-        description: "Something went wrong. Please try again later.",
-      });
-    }
-  };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
@@ -52,7 +20,7 @@ const Contact = () => {
 
   const contactInfo = [
     { icon: Mail, label: 'Email', value: 'amankr1705@gmail.com', href: 'mailto:amankr1705@gmail.com' },
-    { icon: Phone, label: 'Phone', value: '+91 8252363485', href: 'tel:+91 8252363485' }
+    { icon: Phone, label: 'Phone', value: '+91 8252363485', href: 'tel:+918252363485' }
   ];
 
   const socialLinks = [
@@ -73,25 +41,18 @@ const Contact = () => {
         </p>
 
         <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-
-          {/* 🧩 Netlify Hidden Form to Detect */}
-          <form name="contact" netlify hidden>
-            <input type="text" name="name" />
-            <input type="email" name="email" />
-            <textarea name="message" />
-          </form>
-
           {/* Contact Form */}
           <div className="bg-gray-900 p-8 rounded-2xl border border-gray-700">
             <h3 className="text-2xl font-bold text-white mb-6">Send a Message</h3>
             <form
-              name="contact"
+              action="https://formsubmit.co/amankr1705@gmail.com"
               method="POST"
-              data-netlify="true"
-              onSubmit={handleSubmit}
               className="space-y-6"
             >
-              <input type="hidden" name="form-name" value="contact" />
+              <input type="hidden" name="_template" value="table" />
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_autoresponse" value="Thanks for reaching out! I’ll get back to you soon." />
+
               <div>
                 <Input
                   type="text"
@@ -100,7 +61,7 @@ const Contact = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="bg-gray-800 border-gray-600 text-white placeholder-gray-400 focus:border-orange-500 focus:ring-orange-500"
+                  className="bg-gray-800 border-gray-600 text-white placeholder-gray-400"
                 />
               </div>
               <div>
@@ -111,7 +72,7 @@ const Contact = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="bg-gray-800 border-gray-600 text-white placeholder-gray-400 focus:border-orange-500 focus:ring-orange-500"
+                  className="bg-gray-800 border-gray-600 text-white placeholder-gray-400"
                 />
               </div>
               <div>
@@ -122,33 +83,33 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   rows={5}
-                  className="bg-gray-800 border-gray-600 text-white placeholder-gray-400 focus:border-orange-500 focus:ring-orange-500 resize-none"
+                  className="bg-gray-800 border-gray-600 text-white placeholder-gray-400 resize-none"
                 />
               </div>
               <Button
                 type="submit"
-                className="w-full bg-gradient-to-r from-orange-500 to-teal-500 hover:from-orange-600 hover:to-teal-600 text-white py-3 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-orange-500/25"
+                className="w-full bg-gradient-to-r from-orange-500 to-teal-500 text-white py-3 rounded-lg font-semibold hover:scale-105 transition duration-300"
               >
                 Send Message
               </Button>
             </form>
           </div>
 
-          {/* Contact Info */}
+          {/* Contact Info + Social */}
           <div className="space-y-8">
             <div className="bg-gray-900 p-8 rounded-2xl border border-gray-700">
               <h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>
               <div className="space-y-4">
                 {contactInfo.map((contact, index) => {
-                  const IconComponent = contact.icon;
+                  const Icon = contact.icon;
                   return (
                     <a
                       key={index}
                       href={contact.href}
                       className="flex items-center p-4 bg-gray-800 rounded-lg hover:bg-gray-700 transition-all duration-300 hover:scale-105 group"
                     >
-                      <div className="bg-gradient-to-r from-orange-500 to-teal-500 p-3 rounded-lg mr-4 group-hover:scale-110 transition-transform duration-300">
-                        <IconComponent className="text-white" size={20} />
+                      <div className="bg-gradient-to-r from-orange-500 to-teal-500 p-3 rounded-lg mr-4">
+                        <Icon className="text-white" size={20} />
                       </div>
                       <div>
                         <p className="text-gray-400 text-sm">{contact.label}</p>
@@ -160,12 +121,11 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* Social Links */}
             <div className="bg-gray-900 p-8 rounded-2xl border border-gray-700">
               <h3 className="text-2xl font-bold text-white mb-6">Connect Online</h3>
               <div className="grid grid-cols-2 gap-4">
                 {socialLinks.map((social, index) => {
-                  const IconComponent = social.icon;
+                  const Icon = social.icon;
                   return (
                     <a
                       key={index}
@@ -174,7 +134,7 @@ const Contact = () => {
                       rel="noopener noreferrer"
                       className={`flex items-center p-4 bg-gray-800 rounded-lg hover:bg-gray-700 transition-all duration-300 hover:scale-105 group ${social.color}`}
                     >
-                      <IconComponent className="mr-3 group-hover:scale-110 transition-transform duration-300" size={20} />
+                      <Icon className="mr-3 group-hover:scale-110 transition-transform duration-300" size={20} />
                       <span className="font-semibold">{social.label}</span>
                     </a>
                   );
@@ -182,7 +142,6 @@ const Contact = () => {
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </section>
@@ -190,4 +149,5 @@ const Contact = () => {
 };
 
 export default Contact;
+
 
