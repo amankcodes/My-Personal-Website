@@ -1,5 +1,3 @@
-
-import React from 'react';
 import { Github, ExternalLink, Eye } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 

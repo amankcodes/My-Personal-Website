@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Github, Linkedin, Mail, ArrowDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 const Hero = () => {
