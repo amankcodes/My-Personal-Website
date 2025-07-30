@@ -25,9 +25,9 @@ const Contact = () => {
 
   const socialLinks = [
     { icon: Linkedin, label: 'LinkedIn', href: 'https://linkedin.com/in/dev-aman-kr17/', color: 'hover:text-blue-500' },
-    { icon: Github, label: 'GitHub', href: 'https://github.com/BackendbyAman', color: 'hover:text-gray-400' },
+    { icon: Github, label: 'GitHub', href: 'https://github.com/amankcodes', color: 'hover:text-gray-400' },
     { icon: Code, label: 'HackerRank', href: 'https://www.hackerrank.com/profile/amankr17', color: 'hover:text-green-500' },
-    { icon: Trophy, label: 'LeetCode', href: 'https://leetcode.com/u/amankr_2005/', color: 'hover:text-yellow-500' }
+    { icon: Trophy, label: 'LeetCode', href: 'https://leetcode.com/u/amankcodes/', color: 'hover:text-yellow-500' }
   ];
 
   return (
