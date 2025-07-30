@@ -7,7 +7,7 @@ const Projects = () => {
       title: 'Space Invaders Video Game',
       description: 'A simple desktop-based arcade-style Space Invaders game built using Java AWT & Swing. Shoot down alien enemies, dodge attacks, and protect your spaceship in this classic remake',
       tech: ['Java', 'Swing', 'GUI', 'CSS', 'GitHub Actions'],
-      image: 'https://unsplash.com/photos/pacman-arcade-game-bS46IAXWAO4',
+      image: 'https://images.unsplash.com/photo-1589571894960-20bbe2828d0a?w=500&h=300&fit=crop',
       github: 'https://github.com/amankcodes/Space-Invaders.git',
       demo: '#',
       color: 'from-orange-500 to-red-500'
