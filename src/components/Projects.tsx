@@ -14,11 +14,11 @@ const Projects = () => {
 },
 
     {
-      title: 'E-Authentication System (FYP)',
-      description: 'Secure multi-factor authentication system with OTP and QR code login capabilities for enhanced security.',
-      tech: ['Java', 'Spring Boot', 'MySQL', 'Email API', 'JWT'],
+      title: 'React Todo List',
+      description: 'A simple and responsive React-based Todo List app with real-time task management and intuitive UI.',
+      tech: ['JavaScript', 'HTML', 'CSS', 'Reactjs', 'JWT'],
       image: 'https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=500&h=300&fit=crop',
-      github: '#',
+      github: 'https://github.com/amankcodes/React-TodoList.git',
       demo: '#',
       color: 'from-teal-500 to-blue-500'
     },
@@ -27,7 +27,7 @@ const Projects = () => {
       description: 'Interactive Java Swing game converted to web-based platform with modern UI and enhanced gameplay.',
       tech: ['Java', 'Swing', 'Spring Boot', 'HTML', 'CSS'],
       image: 'https://images.unsplash.com/photo-1511512578047-dfb367046420?w=500&h=300&fit=crop',
-      github: 'https://github.com/BackendbyAman/Bubble-sqidder.git',
+      github: 'https://github.com/amankcodes/Space-Invaders.git',
       demo: '#',
       color: 'from-purple-500 to-pink-500'
     }
