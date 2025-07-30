@@ -73,7 +73,7 @@ const Hero = () => {
             <Linkedin size={24} />
           </a>
           <a
-            href="https://github.com/BackendbyAman"
+            href="https://github.com/amankcodes"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-400 hover:text-orange-500 transition-all duration-300 hover:scale-110"
