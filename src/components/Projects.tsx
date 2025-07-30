@@ -4,11 +4,11 @@ import { Button } from '@/components/ui/button';
 const Projects = () => {
   const projects = [
     {
-      title: 'Cloud Attendance System',
-      description: 'Face recognition-based cloud attendance manager with real-time tracking and comprehensive reporting dashboard.',
-      tech: ['Java', 'Spring Boot', 'MySQL', 'Thymeleaf', 'GitHub Actions'],
-      image: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?w=500&h=300&fit=crop',
-      github: 'https://github.com/BackendbyAman/Cloud_Attendance_System.git',
+      title: 'Space Invaders Video Game',
+      description: 'A simple desktop-based arcade-style Space Invaders game built using Java AWT & Swing. Shoot down alien enemies, dodge attacks, and protect your spaceship in this classic remake',
+      tech: ['Java', 'Swing', 'GUI', 'CSS', 'GitHub Actions'],
+      image: 'https://unsplash.com/photos/pacman-arcade-game-bS46IAXWAO4',
+      github: 'https://github.com/amankcodes/Space-Invaders.git',
       demo: '#',
       color: 'from-orange-500 to-red-500'
     },
