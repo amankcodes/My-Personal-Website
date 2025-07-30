@@ -3,15 +3,16 @@ import { Button } from '@/components/ui/button';
 
 const Projects = () => {
   const projects = [
-    {
-      title: 'Space Invaders Video Game',
-      description: 'A simple desktop-based arcade-style Space Invaders game built using Java AWT & Swing. Shoot down alien enemies, dodge attacks, and protect your spaceship in this classic remake',
-      tech: ['Java', 'Swing', 'GUI', 'CSS', 'GitHub Actions'],
-      image: 'https://images.unsplash.com/photo-1589571894960-20bbe2828d0a?w=500&h=300&fit=crop',
-      github: 'https://github.com/amankcodes/Space-Invaders.git',
-      demo: '#',
-      color: 'from-orange-500 to-red-500'
-    },
+   {
+  title: 'Space Invaders Video Game',
+  description: 'A simple desktop-based arcade-style Space Invaders game built using Java AWT & Swing. Shoot down alien enemies, dodge attacks, and protect your spaceship in this classic remake',
+  tech: ['Java', 'Swing', 'GUI', 'CSS', 'GitHub Actions'],
+  image: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?w=500&h=300&fit=crop',
+  github: 'https://github.com/amankcodes/Space-Invaders.git',
+  demo: '#',
+  color: 'from-orange-500 to-red-500'
+},
+
     {
       title: 'E-Authentication System (FYP)',
       description: 'Secure multi-factor authentication system with OTP and QR code login capabilities for enhanced security.',
