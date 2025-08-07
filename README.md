@@ -30,14 +30,6 @@ I love building scalable web applications using **Java**, **Spring Boot**, and *
 - Contact form (static or integrated with service)
 - Dark theme
 
----
 
-## 📂 Folder Structure (if applicable)
-
-```bash
-📦 aman-kumar-folio-verse
- ┣ 📁 src/
- ┣ 📁 public/
- ┣ 📄 index.html
- ┣ 📄 package.json
+on
  ┣ 📄 README.md
