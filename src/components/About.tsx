@@ -39,16 +39,16 @@ const About = () => {
                 <h3 className="text-2xl font-bold text-white">Work Experience</h3>
               </div>
               <div className="space-y-4">
-                <h4 className="text-xl font-semibold text-teal-500">Program Management Intern</h4>
+                <h4 className="text-xl font-semibold text-teal-500">Backend Developer Intern</h4>
                 <p className="text-gray-300">Noida (Remote)</p>
                 <div className="flex items-center text-gray-400 mb-3">
                   <Calendar size={16} className="mr-2" />
                   <span>Dec 2024 – Feb 2025</span>
                 </div>
                 <ul className="text-gray-400 space-y-2">
-                  <li>• Lead generation and client outreach</li>
-                  <li>• Product pitching and presentations</li>
-                  <li>• Business communication & analysis</li>
+                  <li>• DevelopedandoptimizedRESTfulAPIsusingJavaandSpringBoot</li>
+                  <li>•  Integrated MySQL database with backend services</li>
+                
                 </ul>
               </div>
             </div>
