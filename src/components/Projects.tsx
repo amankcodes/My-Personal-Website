@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button';
 
 const Projects = () => {
   const projects = [
-   {
+    {
   title: 'Space Invaders Video Game',
   description: 'A simple desktop-based arcade-style Space Invaders game built using Java AWT & Swing. Shoot down alien enemies, dodge attacks, and protect your spaceship in this classic remake',
   tech: ['Java', 'Swing', 'GUI', 'CSS', 'GitHub Actions'],
